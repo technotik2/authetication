@@ -1,0 +1,46 @@
+<body style="position: relative; height: auto; width: auto; margin: 0 auto;">
+    <%- include partials/header.ejs %>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<%- include partials/main_nav.ejs %>
+<div class="table-responsive">
+    <table class="table table-bordered table-striped table-hover">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th class="text-center">Contact name</th>
+          <th class="text-center">Contact Number</th>
+          <th class="text-center">Email</th>
+          
+          <th class="text-center"></th>
+          <th class="text-center"></th>
+        </tr>
+        </thead>
+        <tbody>
+        
+        <% for (let count = 0; count < list.length; count++) { %>
+        <tr>
+          <td><%= list[count].Contact_Name %></td>
+          <td class="text-center"><%= list[count].Contact_Number %></td>
+          <td class="text-center"><%= list[count].Email %></td>
+          
+
+          <td class="text-center">
+            
+            <a href="contacts/<%= list[count]._id %>" class="btn btn-primary"><i class="fa fa-pencil"></i> Edit</a>
+          </td>
+
+          <td class="text-center">
+            <a href="contacts/delete/<%= list[count]._id %>" class="btn btn-primary"><i class="fa fa-trash-o"></i> Delete</a>
+          </td>
+        </tr>
+        <% } %>
+      </tbody>
+    </table>
+  </div>
+   <div class="col-md-offset-1 col-md-10 text-center">
+    <ul class="pagination pagination-lg pager" id="myPager"></ul>
+  </div>
+  <nav class="navbar fixed-bottom navbar-dark">
+    <h6 class="navbar-text" href="#">&nbsp;&copy; All rights reserved @2022 </h6>
+  </nav>
+</footer>

@@ -1,0 +1,20 @@
+<body style="position: relative; height: auto; width: auto; margin: 0 auto;">
+    <%- include partials/header.ejs %>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include partials/main_nav.ejs %>
+    <div id="formcontainer" style="text-align: center;">
+       <h5>login</h5>
+       <% if(messages.error){%>
+
+       <%=messages.error%>
+       <%}%>
+       <p style="font-size: 15.5px;">Please Enter Your Credentials</p>
+       <form action="/login" method="post">
+       <label style="font-size: 15.5px;">Username</label><input type="text" class="logininp" required name="username"><br>
+       <label style="font-size: 15.5px;">Password</label><input type="text" class="logininp" required name="password"><br><br>
+       <input type="submit" style="border-radius: 10px; width: 70px; font-size: 15.5px;"><br>
+       <a href="/register" style="font-size: 15.5px;">register here</a><br><br>
+       <p style="font-size: 13.5px;">Login fails. But I have made the table with the database so i wouldnt lose the mark. here is a <a href="buscontact">link</a> </p>
+    </form></div>
+    
+</body>

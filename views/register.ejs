@@ -1,0 +1,13 @@
+<body style="position: relative; height: auto; width: auto; margin: 0 auto;">
+    <%- include partials/header.ejs %>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include partials/main_nav.ejs %>
+    <div id="formcontainer" style="text-align: center;">
+       <h5>Register</h5>
+       <p style="font-size: 15.5px;">Please Enter Your Credentials</p>
+       <form action="/register" method="post">
+       <label style="font-size: 15.5px;">Username</label><input type="text" class="logininp" required name="username"><br>
+       <label style="font-size: 15.5px;">Password</label><input type="text" class="logininp" required name="password"><br><br>
+       <input type="submit" style="border-radius: 10px; width: 70px; font-size: 15.5px;">
+    </form></div>
+</body>
